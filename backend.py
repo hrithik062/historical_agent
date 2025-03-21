@@ -6,7 +6,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.tools import Tool
 from langgraph.checkpoint.memory import MemorySaver
 checkpointer = MemorySaver()
-import streamlit st
+import streamlit as st
 import random
 import os 
 os.environ['OPENAI_API_KEY']= st.secrets["openai"]["api_key"]
