@@ -6,8 +6,10 @@ from langchain_openai import ChatOpenAI
 from langchain_core.tools import Tool
 from langgraph.checkpoint.memory import MemorySaver
 checkpointer = MemorySaver()
+import streamlit st
 import random
 import os 
+os.environ['OPENAI_API_KEY']= st.secrets["openai"]["api_key"]
 llm = ChatOpenAI(model='gpt-4o-mini')
 toolkit = GmailToolkit()
 wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
