@@ -8,7 +8,6 @@ from langgraph.checkpoint.memory import MemorySaver
 checkpointer = MemorySaver()
 import random
 import os 
-os.environ['OPENAI_API_KEY']="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"
 llm = ChatOpenAI(model='gpt-4o-mini')
 toolkit = GmailToolkit()
 wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
